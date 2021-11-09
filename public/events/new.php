@@ -4,7 +4,6 @@ require_once "../../module/auth/guard.login.php";
 require_once "../../module/events/get_new_events.php";
 ?>
 
-<link rel="stylesheet" href="../style/login.css">
 </head>
 
 <body>

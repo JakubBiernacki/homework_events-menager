@@ -4,7 +4,6 @@ require_once "../../module/auth/guard.login.php";
 require_once "../../module/events/get_my_events.php";
 ?>
 
-<link rel="stylesheet" href="../style/login.css">
 </head>
 
 <body>
@@ -31,7 +30,7 @@ require_once "../../module/events/get_my_events.php";
 
 
               <p class="card-text"><?php echo $event['description'] ?></p>
-              <a href="#" class="btn btn-danger">usuń</a>
+              <a href="#" class="btn btn-danger">odrzuć</a>
 
             </div>
 

@@ -9,12 +9,12 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo Config::path ?>/events/new_events.php">Nowe wydarzenia</a>
+                    <a class="nav-link active" href="<?php echo Config::path ?>/events/new.php">Nowe wydarzenia</a>
                 </li>
 
                 <?php if ($_SESSION['is_admin'] === "1") : ?>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Dodaj wydarzenie</a>
+                    <a class="nav-link active" href="<?php echo Config::path ?>/events/create.php">Dodaj wydarzenie</a>
                     </li>
                 <?php endif ?>
 
