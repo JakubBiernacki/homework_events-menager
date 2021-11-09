@@ -21,9 +21,10 @@ if (!$user || !$compare) {
 }
 
 if (!count($errors)) {
+    $_SESSION['id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
     $_SESSION['is_admin'] = $user['is_admin'];
-    header('Location: /events/index.php');
+    header('Location: '.Config::path."/events");
 }
 
 

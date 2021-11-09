@@ -1,9 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+require_once "config.php";
 
-$conn = new mysqli($servername, $username, $password, 'szkola_events_meanger');
+$conn = new mysqli(Config::database['host'], Config::database['username'], Config::database['password'], Config::database['db']);
 
 // Check connection
 if ($conn->connect_error) {

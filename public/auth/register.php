@@ -6,7 +6,7 @@ if (isset($_SESSION['username'])) {
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once "../../src/auth/src.register.php";
+    require_once "../../module/auth/service.register.php";
 }
 
 ?>

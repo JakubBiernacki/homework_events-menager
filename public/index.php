@@ -1,4 +1,5 @@
 <?php 
+require_once "../config.php";
 
-header("Location: auth/login.php");
+header("Location: ".Config::path."/auth/login.php");
 

@@ -1,12 +1,12 @@
 <?php include_once "../../view/base/header.php";
 
 if (isset($_SESSION['username'])) {
-    header('Location: /events/index.php');
+    header('Location: ../events/index.php');
 }
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once "../../src/auth/src.login.php";
+    require_once "../../module/auth/service.login.php";
 }
 
 ?>

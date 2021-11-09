@@ -1,7 +1,7 @@
 <?php
 include_once "../../view/base/header.php";
 require_once "../../module/auth/guard.login.php";
-require_once "../../module/events/get_my_events.php";
+require_once "../../module/events/get_new_events.php";
 ?>
 
 <link rel="stylesheet" href="../style/login.css">
@@ -31,7 +31,7 @@ require_once "../../module/events/get_my_events.php";
 
 
               <p class="card-text"><?php echo $event['description'] ?></p>
-              <a href="#" class="btn btn-danger">usuń</a>
+              <a href="#" class="btn btn-primary">dodaj</a>
 
             </div>
 
@@ -45,7 +45,7 @@ require_once "../../module/events/get_my_events.php";
     </div>
 
       <?php if (empty($events)) : ?>
-        <h1>Brak przypisanych wydarzeń</h1>
+        <h1>Brak nowych wydarzeń</h1>
       <?php endif ?>
 
   </div>
