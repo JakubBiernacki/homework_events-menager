@@ -1,7 +1,7 @@
 <?php
 include_once "../../view/base/header.php";
 require_once "../../module/auth/guard.login.php";
-require_once "../../module/events/get_my_events.php";
+require_once "../../module/events/get_all_events.php";
 ?>
 
 </head>
@@ -31,11 +31,29 @@ require_once "../../module/events/get_my_events.php";
 
               <p class="card-text"><?php echo $event['description'] ?></p>
 
-              <form class='col' action="signoff.php" method="post">
-                  <input type="hidden" name="id" value="<?php echo $event['registration_id'] ?>">
-                  <button type="submit" class="btn btn-danger">Wypisz się</button>
+
+              <div class='row row-cols-auto'>
+              
+
+              <form class='col' action="signup.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $event['id'] ?>">
+                <button type="submit" class="btn btn-primary">Zapisz się</button>
               </form>
-              <!-- <a href="#" class="btn btn-danger">Wypisz się</a> -->
+
+              
+
+
+              <?php if ($_SESSION['is_admin'] === '1') : ?>
+
+                <form class='col' action="delete.php" method="post">
+                  <input type="hidden" name="id" value="<?php echo $event['id'] ?>">
+                  <button type="submit" class="btn btn-danger">Usuń</button>
+                </form>
+
+              <?php endif ?>
+              </div>
+
+
 
             </div>
 
@@ -48,10 +66,10 @@ require_once "../../module/events/get_my_events.php";
       <?php endforeach ?>
     </div>
 
-      <?php if (empty($events)) : ?>
-        <h1>Brak przypisanych wydarzeń</h1>
-      <?php endif ?>
+    <?php if (empty($events)) : ?>
+      <h1>Brak nowych wydarzeń</h1>
+    <?php endif ?>
 
   </div>
 
-<?php include_once "../../view/base/footer.php" ?>
+  <?php include_once "../../view/base/footer.php" ?>

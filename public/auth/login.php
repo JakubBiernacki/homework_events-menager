@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                 <?php endif ?>
 
-                                <form action="" method="post">
+                                <form action="" class="needs-validation" method="post">
                                     <div class="form-outline form-white mb-4">
                                         <input type="text" id="typeEmailX" class="form-control form-control-lg" name='username' required/>
                                         <label class="form-label" for="typeEmailX" >Username</label>
@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </section>
+
 
 
     <?php include_once "../../view/base/footer.php" ?>

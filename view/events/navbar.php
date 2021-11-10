@@ -9,7 +9,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo Config::path ?>/events/new.php">Nowe wydarzenia</a>
+                    <a class="nav-link active" href="<?php echo Config::path ?>/events/all.php">Nowe wydarzenia</a>
                 </li>
 
                 <?php if ($_SESSION['is_admin'] === "1") : ?>

@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" name="activate" checked>
-        <label class="form-check-label" >Aktywne</label>
+        <label class="form-check-label" >Aktywny</label>
       </div>
 
       <button type="submit" class="btn btn-primary">Dodaj</button>

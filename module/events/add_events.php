@@ -14,5 +14,5 @@ $all_events_query = $conn->prepare($query);
 $all_events_query->bind_param('sssss', $topic, $type, $disc, $date, $activate);
 $all_events_query->execute();
 
-header('Location: index.php');
+header('Location: all.php');
 
