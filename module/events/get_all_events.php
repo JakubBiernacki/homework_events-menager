@@ -4,7 +4,7 @@ require_once "../../database.php";
 $user_id = $_SESSION['id'];
 
 
-$query = "SELECT ev.id, ev.topic, ev.type, ev.description, ev.date, ev.active, ue.user_id, ue.id as registration_id FROM `events` as ev LEFT JOIN `user-event-registration` as ue ON ev.id = ue.event_id WHERE user_id != ? OR user_id IS NULL ORDER BY  ev.date DESC;";
+$query = "SELECT * FROM events WHERE id NOT IN (SELECT events.id FROM events LEFT JOIN `user-event-registration` ON events.id = `user-event-registration`.event_id WHERE `user-event-registration`.user_id = ? );";
 
 $all_events_query = $conn->prepare($query);
 $all_events_query->bind_param('s', $user_id);
